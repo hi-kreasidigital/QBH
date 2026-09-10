@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Komunitas pelaku usaha UMKM queer di Jawa — ruang tumbuh, jejaring, dan Pasar Inklusif.">
+  <title>Ruang Usaha, Ruang Tumbuh — Pasar Inklusif</title>
+  <style>
+    :root{
+      --ink:#18212b; --muted:#65707c; --paper:#fffaf5; --white:#fff;
+      --blue:#8fc1eb; --pink:#f6cfe0; --green:#17bd8c; --yellow:#ffc32d;
+      --red:#ff4850; --line:#e7ddd3; --shadow:0 18px 55px rgba(24,33,43,.10);
+      --radius:24px; --max:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,250,245,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(231,221,211,.8)}
+    .navin{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em}
+    .mark{width:34px;height:34px;border-radius:11px;background:var(--yellow);position:relative;display:grid;place-items:center;transform:rotate(-5deg)}
+    .mark:before,.mark:after{content:"";position:absolute;border:3px solid var(--ink);border-radius:50%}
+    .mark:before{width:12px;height:12px;top:5px;left:7px}.mark:after{width:9px;height:9px;right:5px;bottom:5px}
+    .links{display:flex;gap:22px;font-size:14px;font-weight:700}.links a:hover{opacity:.6}
+    .actions{display:flex;align-items:center;gap:10px}.lang{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 12px;font-weight:800;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:13px 19px;font-weight:850;cursor:pointer;transition:.2s transform,.2s box-shadow}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(24,33,43,.12)} .btn.dark{background:var(--ink);color:white}.btn.yellow{background:var(--yellow)}
+    .hero{padding:70px 0 54px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    h1{font-size:clamp(46px,6.4vw,82px);line-height:.98;letter-spacing:-.065em;margin:20px 0 24px;max-width:700px}
+    .accent{position:relative;display:inline-block;z-index:1}.accent:after{content:"";position:absolute;z-index:-1;left:-4px;right:-7px;bottom:2px;height:17px;background:var(--pink);transform:rotate(-2deg);border-radius:4px}
+    .hero p{font-size:18px;color:var(--muted);max-width:600px}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .hero-art{position:relative;background:var(--blue);border-radius:40px;padding:20px;box-shadow:var(--shadow);border:2px solid var(--ink);transform:rotate(1deg)}
+    .hero-art img{display:block;width:100%;border-radius:25px;mix-blend-mode:multiply}
+    .sticker{position:absolute;background:var(--yellow);border:2px solid var(--ink);padding:10px 14px;border-radius:18px;font-weight:900;box-shadow:5px 5px 0 var(--ink);transform:rotate(-7deg);right:-18px;top:25px}
+    section{padding:88px 0}.soft{background:#fff}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+    .kicker{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:#7a6d62}.section-head h2{font-size:clamp(32px,4vw,54px);line-height:1.02;letter-spacing:-.045em;margin:8px 0 0}.lead{max-width:530px;color:var(--muted)}
+    .story{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:0 8px 30px rgba(24,33,43,.045)}
+    .quote{background:var(--green);border:2px solid var(--ink);box-shadow:7px 7px 0 var(--ink);min-height:100%;display:flex;flex-direction:column;justify-content:space-between}.quote p{font-size:28px;line-height:1.15;font-weight:900;letter-spacing:-.03em}
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}.mini{padding:22px;border-radius:20px;border:1px solid var(--line);background:#fffaf5}.mini strong{display:block;margin-bottom:7px}
+    .two-layers{display:grid;grid-template-columns:1fr 1fr;gap:18px}.layer{padding:30px;border-radius:28px;border:2px solid var(--ink)}.layer.public{background:var(--pink)}.layer.inner{background:var(--yellow)}
+    .layer h3{font-size:24px;margin:0 0 12px}.layer ul{padding-left:20px;margin-bottom:0}.layer li{margin:7px 0}
+    .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.pillar{padding:26px;border:1px solid var(--line);border-radius:24px;background:#fff}.num{font-size:13px;font-weight:900;color:#8a7d73}.pillar h3{margin:8px 0;font-size:21px}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;position:relative}.phase{background:#fff;border:2px solid var(--ink);border-radius:22px;padding:22px;min-height:210px;position:relative}.phase:nth-child(1){background:var(--blue)}.phase:nth-child(2){background:var(--pink)}.phase:nth-child(3){background:var(--yellow)}.phase:nth-child(4){background:var(--green)}
+    .phase b{font-size:13px;text-transform:uppercase;letter-spacing:.08em}.phase h3{font-size:24px;line-height:1.05;margin:13px 0}.phase p{font-size:14px;margin:0}.phase small{position:absolute;bottom:18px;left:22px;font-weight:850}
+    .market{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.market-visual{border-radius:36px;background:var(--yellow);border:2px solid var(--ink);padding:30px;min-height:360px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .market-window{width:85%;background:#fff;border:2px solid var(--ink);border-radius:20px;box-shadow:10px 10px 0 var(--ink);padding:18px;transform:rotate(-2deg)}.window-top{display:flex;gap:7px;margin-bottom:16px}.dot{width:9px;height:9px;border-radius:50%;background:var(--ink)}
+    .product-row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.product{height:85px;border-radius:12px;border:1px solid var(--line);background:linear-gradient(135deg,#f6cfe0,#8fc1eb)}.product:nth-child(2){background:linear-gradient(135deg,#17bd8c,#ffc32d)}.product:nth-child(3){background:linear-gradient(135deg,#ffc32d,#ff4850)}
+    .security{display:grid;grid-template-columns:1fr 1fr;gap:18px}.security .card{padding:24px}.check{display:flex;gap:12px;align-items:flex-start;margin:12px 0}.check i{width:25px;height:25px;flex:0 0 25px;border-radius:8px;background:var(--green);border:2px solid var(--ink);display:grid;place-items:center;font-style:normal;font-size:13px;font-weight:900}
+    .join{background:var(--ink);color:#fff;border-radius:34px;padding:50px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}.join h2{font-size:clamp(34px,5vw,58px);line-height:1;letter-spacing:-.05em;margin:0 0 18px}.join p{color:#c6cbd0}.join .card{color:var(--ink)}
+    footer{padding:35px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .hidden{display:none}.mobile-menu{display:none}
+    @media(max-width:900px){.links{display:none}.mobile-menu{display:inline-flex}.hero-grid,.story,.market,.join{grid-template-columns:1fr}.hero-art{max-width:700px;margin:auto}.pillars{grid-template-columns:1fr 1fr}.timeline{grid-template-columns:1fr 1fr}.security{grid-template-columns:1fr}}
+    @media(max-width:620px){.container{width:min(var(--max),calc(100% - 26px))}.navin{height:68px}.actions .btn{display:none}.hero{padding-top:42px}.mini-grid,.two-layers,.pillars,.timeline{grid-template-columns:1fr}.section-head{display:block}.section-head .lead{margin-top:15px}.hero-art{padding:10px;border-radius:28px}.sticker{right:4px}.join{padding:30px}.story .quote p{font-size:24px}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="container navin">
+    <a class="brand" href="#top"><span class="mark"></span><span>Pasar Inklusif</span></a>
+    <div class="links">
+      <a href="#tentang" data-id="Tentang">Tentang</a><a href="#program" data-id="Program">Program</a><a href="#keamanan" data-id="Keamanan">Keamanan</a><a href="#masa-depan" data-id="Masa depan">Masa depan</a>
+    </div>
+    <div class="actions"><button class="lang" id="langBtn">EN</button><a class="btn dark" href="#bergabung" data-id="Bergabung">Bergabung</a><button class="lang mobile-menu" onclick="document.querySelector('.links').style.display='flex'">☰</button></div>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow" data-id="Komunitas • Jawa">Komunitas • Jawa</span>
+      <h1 data-id="Ruang usaha.<br><span class='accent'>Ruang tumbuh.</span>">Ruang usaha.<br><span class="accent">Ruang tumbuh.</span></h1>
+      <p data-id="Sebuah ruang untuk pelaku usaha UMKM queer di Jawa untuk saling terhubung, belajar, dan bertumbuh — dengan keamanan dan privasi sebagai fondasi.">Sebuah ruang untuk pelaku usaha UMKM queer di Jawa untuk saling terhubung, belajar, dan bertumbuh — dengan keamanan dan privasi sebagai fondasi.</p>
+      <div class="cta"><a class="btn dark" href="#bergabung" data-id="Bergabung dengan komunitas →">Bergabung dengan komunitas →</a><a class="btn yellow" href="#dukung" data-id="Dukung gerakan">Dukung gerakan</a></div>
+    </div>
+    <div class="hero-art">
+      <span class="sticker" data-id="Dari komunitas, untuk komunitas">Dari komunitas,<br>untuk komunitas</span>
+      <img src="assets/hero-illustration.png" alt="Ilustrasi orang bekerja bersama di sekitar sebuah platform digital">
+    </div>
+  </div>
+</section>
+
+<section id="tentang" class="soft">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">01 — Kenapa kami ada</div><h2 data-id="Yang kami bangun bukan sekadar jaringan.">Yang kami bangun bukan sekadar jaringan.</h2></div><p class="lead" data-id="Komunitas ini berangkat dari keyakinan bahwa kebersamaan dapat menjadi fondasi support system bagi pelaku usaha queer untuk tumbuh.">Komunitas ini berangkat dari keyakinan bahwa kebersamaan dapat menjadi fondasi support system bagi pelaku usaha queer untuk tumbuh.</p></div>
+    <div class="story">
+      <article class="card">
+        <p>Berbeda dengan individu heteroseksual yang sejak lahir sudah berada dalam sistem yang dibangun untuk mereka, individu queer sering kali harus membangun dan mengasah kemampuan mereka lebih keras agar bisa menonjol dan dinilai dari prestasi — supaya identitas mereka tidak dipertanyakan.</p>
+        <p>Ketika pelaku usaha saling terhubung, kita dapat saling mendukung dan memberdayakan: <strong>dari komunitas, untuk komunitas.</strong></p>
+        <div class="mini-grid">
+          <div class="mini"><strong>Jejaring</strong><span>Terhubung dengan sesama pelaku usaha.</span></div>
+          <div class="mini"><strong>Belajar</strong><span>Sharing, mentoring, dan pengembangan usaha.</span></div>
+        </div>
+      </article>
+      <article class="card quote"><div><div class="kicker">Key belief</div><p>“Saya tidak sendirian. Saya dikelilingi teman-teman pelaku usaha yang siap mendukung saya.”</p></div><strong>— support system, dari komunitas untuk komunitas</strong></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">02 — Cara kami hadir</div><h2>Produk yang bicara,<br>bukan identitas.</h2></div><p class="lead">Ruang publik dan ruang internal punya fungsi berbeda. Pemisahan ini membantu menjaga keamanan anggota tanpa menghilangkan ruang otentik untuk terhubung.</p></div>
+    <div class="two-layers">
+      <article class="layer public"><h3>Komunikasi eksternal</h3><p>Untuk konsumen umum, calon sponsor, dan donatur.</p><ul><li>Fokus pada produk & kualitas usaha.</li><li>Berbicara tentang dampak ekonomi dan pemberdayaan.</li><li>Tidak mengeksploitasi identitas anggota sebagai “daya jual”.</li></ul></article>
+      <article class="layer inner"><h3>Komunikasi internal</h3><p>Untuk sesama anggota komunitas.</p><ul><li>Ruang aman untuk berjejaring.</li><li>Belajar dan berbagi pengalaman usaha.</li><li>Saling mendukung dan membangun etalase ekonomi bersama.</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="program" class="soft">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">03 — Program</div><h2>Mulai dari manusia,<br>baru infrastruktur.</h2></div><p class="lead">Roadmap publik dibuat sederhana. Detail operasional, data anggota, dan keputusan internal tetap berada di ruang yang lebih privat.</p></div>
+    <div class="pillars">
+      <article class="pillar"><div class="num">01</div><h3>Community call</h3><p>Ruang perkenalan, sharing session usaha, update program, dan tanya jawab secara berkala.</p></article>
+      <article class="pillar"><div class="num">02</div><h3>Belajar & mentoring</h3><p>Membangun jejaring belajar dan dukungan agar usaha anggota dapat berkembang.</p></article>
+      <article class="pillar"><div class="num">03</div><h3>Etalase bersama</h3><p>Dalam fase lanjut, anggota dapat memiliki etalase ekonomi bersama melalui Pasar Inklusif.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="keamanan">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">04 — Safety by design</div><h2>Keamanan bukan fitur tambahan.</h2></div><p class="lead">Prinsip keamanan berlaku di setiap fase — dari pendaftaran hingga marketplace.</p></div>
+    <div class="security">
+      <div class="card">
+        <div class="check"><i>✓</i><div><strong>Privasi bertingkat</strong><br>Anggota memilih sendiri tingkat visibilitas publik. Default paling privat.</div></div>
+        <div class="check"><i>✓</i><div><strong>Tidak ada outing</strong><br>Data pribadi tidak ditampilkan publik tanpa persetujuan eksplisit.</div></div>
+        <div class="check"><i>✓</i><div><strong>Data seperlunya</strong><br>Verifikasi berfokus pada keberadaan usaha, bukan dokumen sensitif.</div></div>
+      </div>
+      <div class="card">
+        <div class="check"><i>✓</i><div><strong>Exit plan</strong><br>Ada prosedur untuk menyembunyikan atau menghapus data ketika situasi keamanan berubah.</div></div>
+        <div class="check"><i>✓</i><div><strong>Ruang tertutup</strong><br>Grup inti bersifat invite-only setelah verifikasi ringan dan memiliki aturan moderasi.</div></div>
+        <div class="check"><i>✓</i><div><strong>Privacy policy</strong><br>Kebijakan privasi harus mudah dipahami dan menjelaskan cara keluar dari sistem.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="masa-depan" class="soft">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">05 — Roadmap publik</div><h2>Empat fase.<br>Satu arah.</h2></div><p class="lead">Ini versi ringkas dari roadmap internal. Detail target, kanal, SOP, dan pertanyaan keputusan disimpan untuk ruang pengurus.</p></div>
+    <div class="timeline">
+      <article class="phase"><b>Fase 1</b><h3>Himpun</h3><p>Formulir, komunitas tertutup, community call, kolaborasi jaringan, dan awareness.</p><small>± 2–3 bulan awal</small></article>
+      <article class="phase"><b>Fase 2</b><h3>Bangun wajah publik</h3><p>Situs one-page bilingual sebagai explainer, pintu bergabung, dan pusat informasi.</p><small>± 3–4 minggu development</small></article>
+      <article class="phase"><b>Fase 3</b><h3>Dukung & danai</h3><p>Sponsorship, donasi, transparansi penggunaan dana, dan fondasi operasional.</p><small>Berjalan berkelanjutan</small></article>
+      <article class="phase"><b>Fase 4</b><h3>Pasar Inklusif</h3><p>Riset anggota → MVP → beta tertutup → peluncuran, setelah basis dan sumber daya memadai.</p><small>Setelah prasyarat terpenuhi</small></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container market">
+    <div class="market-visual" aria-hidden="true">
+      <div class="market-window"><div class="window-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div style="font-weight:900;margin-bottom:13px">Pasar Inklusif <span style="float:right">⌕</span></div><div class="product-row"><div class="product"></div><div class="product"></div><div class="product"></div></div></div>
+    </div>
+    <div>
+      <div class="kicker">Masa depan</div><h2 style="font-size:clamp(34px,4.5vw,58px);line-height:1.02;letter-spacing:-.05em">Marketplace yang tumbuh dari komunitas.</h2>
+      <p class="lead">Pasar Inklusif direncanakan sebagai etalase ekonomi bersama. Profil toko dan cerita usaha dapat memiliki tingkat visibilitas yang fleksibel, dengan consent sebagai dasar.</p>
+      <p><strong>Bukan dimulai dari teknologi.</strong> Marketplace baru masuk ketika anggota aktif, sumber daya tersedia, model bisnis jelas, dan kesiapan legal transaksi online telah dibahas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="dukung">
+  <div class="container">
+    <div class="join" id="bergabung">
+      <div><div class="kicker" style="color:#ffc32d">06 — Take part</div><h2>Bangun ekosistemnya bersama.</h2><p>Apakah kamu pelaku usaha, calon partner, sponsor, atau ally? Mari mulai dari percakapan yang aman.</p><div class="cta"><a class="btn yellow" href="#" onclick="alert('Ganti tautan ini dengan formulir pendaftaran kamu.');return false;">Bergabung →</a><a class="btn" style="background:#fff;color:var(--ink)" href="#" onclick="alert('Ganti tautan ini dengan halaman/proposal dukungan.');return false;">Dukung kami</a></div></div>
+      <div class="card"><strong>Catatan privasi</strong><p>Form publik sebaiknya hanya meminta data yang diperlukan. Detail identitas anggota, database, SOP verifikasi, dan koordinasi internal tidak ditampilkan di halaman publik.</p><small>Versi prototype — konten final perlu direview pengurus sebelum live.</small></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container foot"><span>© 2026 — Komunitas UMKM Queer Jawa</span><span>Privacy-first · ID / EN · Pasar Inklusif</span></div></footer>
+
+<script>
+  const langBtn=document.getElementById('langBtn');
+  const originals=new Map();
+  document.querySelectorAll('[data-id]').forEach(el=>originals.set(el,el.innerHTML));
+  const en={
+    "Komunitas • Jawa":"Community • Java",
+    "Ruang usaha.<br><span class='accent'>Ruang tumbuh.</span>":"Space to build.<br><span class='accent'>Space to grow.</span>",
+    "Sebuah ruang untuk pelaku usaha UMKM queer di Jawa untuk saling terhubung, belajar, dan bertumbuh — dengan keamanan dan privasi sebagai fondasi.":"A space for queer-owned small businesses in Java to connect, learn, and grow — with safety and privacy as the foundation.",
+    "Bergabung dengan komunitas →":"Join the community →","Dukung gerakan":"Support the movement",
+    "Dari komunitas, untuk komunitas":"By the community,<br>for the community",
+    "Tentang":"About","Program":"Programs","Keamanan":"Safety","Masa depan":"Future","Bergabung":"Join",
+    "Yang kami bangun bukan sekadar jaringan.":"We are building more than a network.",
+    "Produk yang bicara,<br>bukan identitas.":"Let the product speak,<br>not the identity.",
+    "Mulai dari manusia,<br>baru infrastruktur.":"People first,<br>infrastructure second.",
+    "Keamanan bukan fitur tambahan.":"Safety is not an add-on.",
+    "Empat fase.<br>Satu arah.":"Four phases.<br>One direction.",
+    "Marketplace yang tumbuh dari komunitas.":"A marketplace that grows from community.",
+    "Bangun ekosistemnya bersama.":"Build the ecosystem together."
+  };
+  let isEn=false;
+  langBtn.onclick=()=>{
+    isEn=!isEn; langBtn.textContent=isEn?'ID':'EN';
+    document.querySelectorAll('[data-id]').forEach(el=>{
+      const key=originals.get(el);
+      if(isEn && en[key]) el.innerHTML=en[key]; else el.innerHTML=key;
+    });
+  };
+</script>
+</body>
+</html>
